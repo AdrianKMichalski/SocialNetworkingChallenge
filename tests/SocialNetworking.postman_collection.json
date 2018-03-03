@@ -1,0 +1,697 @@
+{
+	"info": {
+		"name": "SocialNetworking",
+		"_postman_id": "229aaaf0-ae37-469e-9fcd-6face9b2368b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alice adds her first post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7b539e75-e17d-466e-b5e1-4d9085268631",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 201', () => pm.response.to.have.status(201))"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"body\": \"Hello, I am Alice. This is my first post.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Alice/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Alice",
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Bob adds his first post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f4aafe6-ab61-4a1a-b19b-8f32bb872a41",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 201', () => pm.response.to.have.status(201))"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"body\": \"Hello, I am Bob. This is my first post.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Bob/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Bob",
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tiff adds his first post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4c0d94a3-970d-4641-9daf-185c4f314539",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 201', () => pm.response.to.have.status(201))"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"body\": \"Hello, I am Tiff. This is my first post.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Tiff/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Tiff",
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tiff tries to add too long post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "403c16ea-ddbc-4e60-88ef-e0f761e11ddb",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 400', () => pm.response.to.have.status(400))"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"body\": \"This post will exceed the 140 characters limit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Tiff/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Tiff",
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alice adds her second post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5244ed2d-7204-4fc8-8958-e2b40a6b6ec3",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 201', () => pm.response.to.have.status(201))"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"body\": \"Hello, I am Alice. This is my second post.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Alice/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Alice",
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Alice's wall",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44f5f1bc-b03c-4a0d-b4c1-452c8afb07fc",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))",
+							"",
+							"pm.test('Alice has 2 posts on her wall', () => {",
+							"    let posts = pm.response.json()",
+							"    pm.expect(posts).to.be.an('array').with.lengthOf(2)",
+							"})",
+							"",
+							"",
+							"pm.test('Alice posts are posted in reverse chronological order', () => {",
+							"    let posts = pm.response.json()",
+							"    let arePostsInReverseChronologicalOrder = posts.map(post => post.creationDate)",
+							"        .reduce((previousValue, currentValue, index, array) => {",
+							"            return previousValue && (array[index - 1] >= array[index])",
+							"        })",
+							"    pm.expect(arePostsInReverseChronologicalOrder).to.be.true;",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Alice/wall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Alice",
+						"wall"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alice follows Bob",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "38e37637-bfda-4f88-b45c-6c728bf7882d",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "35bd7b57-15e2-40cb-a925-b1e8559ee7b1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Alice/follow/Bob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Alice",
+						"follow",
+						"Bob"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tiff follows Alice",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4c33e2c1-8473-41f5-a496-1bcd6a3d2ce4",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "35bd7b57-15e2-40cb-a925-b1e8559ee7b1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Tiff/follow/Alice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Tiff",
+						"follow",
+						"Alice"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tiff follows Bob",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4b88e9d7-5852-4a56-b514-061573a79496",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "35bd7b57-15e2-40cb-a925-b1e8559ee7b1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Tiff/follow/Bob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Tiff",
+						"follow",
+						"Bob"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tiff follows Nobody",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "65a26672-1cc4-4b8b-9276-49f560f65962",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 400', () => pm.response.to.have.status(400))"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "35bd7b57-15e2-40cb-a925-b1e8559ee7b1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Tiff/follow/Nobody",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Tiff",
+						"follow",
+						"Nobody"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get users followed by Alice",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5a3b5a72-3b74-48de-bba6-84386628a363",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))",
+							"",
+							"pm.test('Alice follows only Bob', () => {",
+							"    let usersFollowedByAlice = pm.response.json()",
+							"    pm.expect(usersFollowedByAlice).to.be.an('array').with.length(1).that.includes('Bob')",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Alice/followed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Alice",
+						"followed"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get users followed by Bob",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "210548f0-0700-47b7-8fe0-d2965b567293",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))",
+							"",
+							"pm.test('Bob does not follow anyone', () => {",
+							"    let usersFollowedByBob = pm.response.json()",
+							"    pm.expect(usersFollowedByBob).to.be.an('array').which.is.empty",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Bob/followed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Bob",
+						"followed"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get users followed by Tiff",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c6cbd881-fed5-429e-9b7f-bbfb0e1d9bdb",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))",
+							"",
+							"pm.test('Tiff follows Alice and Bob', () => {",
+							"    let usersFollowedByAlice = pm.response.json()",
+							"    pm.expect(usersFollowedByAlice).to.be.an('array').with.length(2).that.includes('Alice').and.includes('Bob')",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Tiff/followed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Tiff",
+						"followed"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tiff's timeline",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a84a918f-7366-4f85-b39c-ebb6d755d195",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status code is 200', () => pm.response.to.have.status(200))",
+							"",
+							"pm.test('Tiff has 3 posts on his timeline', () => {",
+							"    let posts = pm.response.json()",
+							"    pm.expect(posts).to.be.an('array').with.lengthOf(3)",
+							"})",
+							"",
+							"",
+							"pm.test('Posts are presented in reverse chronological order', () => {",
+							"    let posts = pm.response.json()",
+							"    let arePostsInReverseChronologicalOrder = posts.map(post => post.creationDate)",
+							"        .reduce((previousValue, currentValue, index, array) => {",
+							"            return previousValue && (array[index - 1] >= array[index])",
+							"        })",
+							"    pm.expect(arePostsInReverseChronologicalOrder).to.be.true;",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users/Tiff/timeline",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Tiff",
+						"timeline"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d846adb1-19a3-430d-937a-e508c3e5750f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "97c6ba10-7bfd-49e7-b3ec-77678d1139cc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
